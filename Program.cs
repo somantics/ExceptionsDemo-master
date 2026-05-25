@@ -44,9 +44,20 @@
                 }
 
                 Console.WriteLine("Programmet avslutas normalt.");
+
+                // Exempel 2: farlig operation utan try-catch
+                Console.WriteLine("\n=== Farlig operation (ingen skyddsnät) ===");
+                DangerousOperation(); // Kraschar programmet – prova att linda in med try-catch!
             }
 
             // Exempel på metod som själv kastar ett undantag (throw)
+            static void DangerousOperation()
+            {
+                int[] numbers = { 1, 2, 3 };
+                // Index 99 finns inte – ger IndexOutOfRangeException
+                Console.WriteLine(numbers[99]);
+            }
+
             static double ProcessFile(string fileName)
             {
                 // Om filnamnet är tomt: logiskt fel vi vill signalera

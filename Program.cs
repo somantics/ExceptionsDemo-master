@@ -6,6 +6,9 @@
         {
             {
                 Console.WriteLine("=== Start av programmet ===");
+                Console.WriteLine(HelloMessage());
+                Console.WriteLine("Christofer was here");
+
                 // Exempel 1: try-catch-finally
                 try
                 {
@@ -42,6 +45,11 @@
                 }
 
                 Console.WriteLine("Programmet avslutas normalt.");
+            }
+
+            string HelloMessage()
+            {
+                return "Hello friend!";
             }
 
             // Exempel på metod som själv kastar ett undantag (throw)
